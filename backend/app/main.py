@@ -23,12 +23,11 @@ app = FastAPI(title="Zoom Clone API", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", os.getenv("FRONTEND_URL", "")],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 app.include_router(meetings_router)
 app.include_router(participants_router)
 

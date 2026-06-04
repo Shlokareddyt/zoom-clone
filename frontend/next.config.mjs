@@ -1,11 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'standalone',
-  experimental: {
-    outputFileTracingIncludes: {
-      '/**': ['./app/**/*'],
-    },
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
